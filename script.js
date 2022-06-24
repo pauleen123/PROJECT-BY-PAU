@@ -50,8 +50,19 @@ function getWeather(latitude,longitude){
     fetch(api).then(function(response){
         let data=response.json();
         return data
+    })
+    .then(function(data){
+        weather.temperature.value=Math.floor(data.main.temp-KELVIN)
+        weather.description=data.weather[0].description;
+        weather.iconId=data.weather[0].icon;
+        weather.city=data.name
+        weather.country=data.sys.country;
+    })
+    .then(function(){
+        displayWeather();
     });
-    .then(function(data{
-        weather.temperature.value=Math.floor(data.main.temp)
-    }))
+}
+//display the eather to the UI
+function displayWeather(){
+    
 }
