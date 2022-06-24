@@ -1,5 +1,5 @@
-const
-const
-const
-const
-const
+const iconElement=document.querySelector()
+const tempElement=document.querySelector()
+const descElement=document.querySelector()
+const locationElement=document.querySelector()
+const notificationElement=document.querySelector()
