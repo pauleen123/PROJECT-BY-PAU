@@ -16,7 +16,7 @@ weather.temperature={
 //const and variables
 const KELVIN=273;
 //API key 
-const key='3e634834ad192fb4a392c07720892283'
+const key='96f6ba150dbfde1782395bffef95d6a2'
 
 //check i the broser supports geolocoalization
 if('geolocation'in navigator){
@@ -47,7 +47,7 @@ function showError(error)
 //get api rom provider
 function getWeather(latitude,longitude){
     let api =`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`
-    fetch(api).then(function(response){
+        fetch(api).then(function(response){
         let data=response.json();
         return data
     })
